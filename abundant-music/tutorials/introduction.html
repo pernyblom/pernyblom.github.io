@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Tutorial</title>
+
+    <script src="common_data/jquery.js" ></script>
+    <script src="common_data/common.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="background-div">
+</div>
+
+<div class="header-div" ></div>
+
+<div class="main-div" id="first-tutorial">
+    <h1>First Tutorial</h1>
+
+    <p>
+        Welcome to the first tutorial about <a href="http://www.abundant-music.com" target="_blank" >Abundant Music</a>!
+    </p>
+    <p>"Abundant Music" is a procedural music generator that doesn't require any musical knowledge to generate music.
+        You can generate new songs by pressing just a few buttons.</p>
+    <p>
+        This tutorial covers an <a href="#interface">introduction to the interface</a>, <a href="#login">how to log in</a> and <a href="#firstsong">how to render your first song</a>.
+    </p>
+
+    <div class="sub-div" id="interface" >
+        <h2>Interface</h2>
+
+        <p>The interface of Abundant Music consists of a lot of windows and a music visualizer. You can open and close the windows with the buttons at the top.</p>
+
+        <p>Try to open the "Songs" window. Here you can listen to some pre-rendered songs by clicking on the links. </p>
+        <p>In the background, you can see the music visualizer. Drag with the mouse to change the view.</p>
+
+        <img src="introduction_data/interface.png" />
+
+    </div>
+
+    <div class="sub-div" id="login">
+        <h2>Logging In</h2>
+        <p>To start composing songs, you need to log in through the "Account" window. You can use a Google or Yahoo account for this.
+            More account providers will be added later.</p>
+
+        <img src="introduction_data/account.png" />
+
+        <p>
+            After you have logged in, you will have to accept the terms of use before you continue. These basically asks you to accept that
+            all songs become public domain, which means that anyone can use them for anything (commersial stuff as well), but you can't claim copyright.
+        </p>
+    </div>
+
+    <div class="sub-div" id="firstsong">
+        <h2>First Song</h2>
+
+        <p>Now that you are logged in, it is time to compose your first song!</p>
+
+        <p>First, open the "Song Settings" window and select the "Song" tab. Then change the "Seed" property to anything (your name perhaps?) or generate a random
+            seed by pressing the small "R" button. You should now see something like this:</p>
+
+        <img src="introduction_data/song_settings.png" />
+
+        <p>The next step is to open the "Export" window and select the "Mp3" tab. Then click the "Export Mp3" button and wait for the Mp3 file to generate.
+            When you see a little player show up, you can either play the generated Mp3 (while it is visualized in the back) or use the "Result Link" to download the file!</p>
+
+        <img src="introduction_data/export_mp3.png" />
+
+        <p>Mp3 and Ogg files are only stored for 20 minutes, so make sure that you download it before the time runs out if you intend to use it :)</p>
+        <p>If you can't hear anything when using the player, your browser might not support the Mp3 format. Try to use the Ogg exporter instead!</p>
+        <p>You can also generate Midi files in the "Midi" tab and use another program to render it.</p>
+
+        <p>A more detailed introduction to rendering and playing songs can be found in the <a href="render_and_play_songs.html">Render and Play Songs Tutorial</a></p>
+    </div>
+
+
+</div>
+
+<div class="footer-div" ></div>
+
+</body>
+</html>

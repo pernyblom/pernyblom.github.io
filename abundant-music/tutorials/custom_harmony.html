@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Harmony Tutorial</title>
+
+    <script src="common_data/jquery.js" ></script>
+    <script src="common_data/common.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="background-div">
+</div>
+
+<div class="header-div" ></div>
+
+<div class="main-div">
+    <h1>Custom Harmony Tutorial</h1>
+
+    <p>
+        <a href="http://www.abundant-music.com" target="_blank" >Abundant Music</a> uses a quite sophisticated harmonic rythm generator that
+        supports different phrases and phrase groups.
+    </p>
+
+    <p>
+        It also supports custom harmonic rythms which allows the user to enter any scale and chord using the 12 equal temperament tuning.
+    </p>
+
+
+    <div class="sub-div">
+        <h2>Setting Up</h2>
+        <p>
+            We are just going to compose a single phrase in this tutorial so we'll use a custom song structure by setting "Overwrite Song Structure" to true.
+            Also, make sure that there is only one "Verse 1" in the song structure.
+        </p>
+
+        <img src="custom_harmony_data/setting_up.png" />
+
+        <p>
+            Then, add a "song part type override info" for "Verse 1" and set "Override phrase group type" to true.
+            Set the "Phrase group type" to "Single custom harmony".
+        </p>
+
+        <p>
+            Scroll down and set the "Custom harmony indices" to 1. If you set it to 0, the default harmonic rythm is used instead.
+        </p>
+
+        <img src="custom_harmony_data/setting_up2.png" />
+
+        <p>
+            We are also going to force our custom harmony to use the main time signature.
+            Select the "Parameters" tab and set "Set custom harmony numerator" to true.
+        </p>
+
+        <img src="custom_harmony_data/setting_up3.png" />
+
+    </div>
+
+
+    <div class="sub-div">
+        <h2>Harmonic Rythm</h2>
+        <p>
+            In the "Details" tab, at the bottom, there is a list called "Harmony Elements" where you can add custom harmonic rythms.
+        </p>
+
+        <p>
+            Click on the "+ Simple Harmony Sequence" button and then click on the item that appears in the list.
+        </p>
+
+        <p>
+            Set "Length Mode" to "Count and Length Pattern", "Count" to 5 and "Chord Roots" to "0 1 3 4 0". This will give a common progression I, II, IV, V, I.
+            Then set the "Length pattern" to "1 0.5 0.5 1 1" to determine the lengths (in measures) of the harmonic rythm.
+        </p>
+
+        <p>
+            We will now spice up the harmony with some seventh chords. Add a chord type to the "Chord Types" list and set it to "Seventh". Then set
+            the "Chord Type Indices" to "0 1 1 1 0" which will set the middle chords to seventh.
+        </p>
+
+        <p>
+            We will now invert some of the chords by setting "Chord inversions" to "0 1 0 1 0", which will now give the progression I, II65, IV7, V65, I.
+        </p>
+
+        <img src="custom_harmony_data/harmonic_rythm.png" />
+
+
+        <p>
+            There! Now we have a nice little harmonic rythm that we have complete control over. We will now move on to constrain how the voice lines can
+            move within this harmonic rythm.
+        </p>
+
+    </div>
+
+
+    <div class="sub-div">
+        <h2>Voice Line Constraints</h2>
+        <p>
+            Sometimes it is very useful to partly control the voice lines when you create your own harmonic rythm. Sometimes you want to steer the
+            melody to the tonic in the final measure or prevent it from doing so etc. It is also possible to add constraints to avoid bad voice leading in those cases
+            the default/classical voice leading planner fails to detect that something sounds like crap.
+        </p>
+
+        <p>
+            Abundant Music has a lot of different voice leading constraints built in but so far it currently only exposes the "Voice Chord Note Constraint".
+            With this constraint, you can penalize that certain voice lines move to certain notes in the chord.
+        </p>
+
+        <p>
+            We are going to penalize the melody if it moves to the tonic and create an imperfect cadence, which also suits the progression well.
+        </p>
+
+        <img src="custom_harmony_data/constraints.png" />
+
+    </div>
+
+
+    <div class="sub-div">
+        <h2>More Options</h2>
+        <p>
+            As you can see, there are many more options for harmonic rythms. You can define your own scale types by setting the "Custom Scales" property. The input is
+            the absolute semi-tone offsets of the chromatic scale (12-TET). The default value "0 2 4 5 7 9 11" gives the major scale. Use comma "," to enter more
+            custom scales.
+        </p>
+        <p>
+            You can then use "Custom Scale Indices" to index the scales you have entered.
+        </p>
+
+        <p>
+            Every scale has a number of "modes". For example, major and minor scale has 7 different modes which you can access by changing
+            "Scale Modes". These can also be negative.
+        </p>
+
+
+        <p>
+            Chords can also be customized. Just change the chord type to "Custom" and use the "Custom Chords" property to select what scale notes
+            to use in the chord.
+        </p>
+
+        <p>
+            It is possible to use the "original" rythm for the harmony by setting "Length Mode" to "Rythm Only". Then the total length will determine
+            how long the harmonic rythm becomes. The total length can be overwritten by the "original" total length, which is probably a good idea
+            since the rythm and total length are coupled.
+        </p>
+    </div>
+
+    <div class="sub-div">
+        <h2>Multiple Harmonic Rythms</h2>
+        <p>
+            You can create several custom harmonic rythms. To use them, just index them from the custom song structure parts (the index starts at 1 for
+            the custom harmonies).
+        </p>
+
+        <p>
+            If you have a phrase group that has two or more phrases, you can just list the harmony indices that you want to use in order.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="footer-div" ></div>
+
+</body>
+</html>

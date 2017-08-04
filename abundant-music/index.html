@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Abundant Music</title>
+
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+
+    <meta name="description" content="Procedural music editor" >
+
+</head>
+<body style="overflow: hidden; padding: 0px; margin: 0px;">
+
+<div id="topdiv" style="position: relative; padding: 0px; margin: 0px; border: 0px;" >
+    <div id="canvasdiv" style="position: absolute; padding: 0px; margin: 0px; border: 0px;">
+        <canvas id="canvasfor2dcontext" />
+    </div>
+    <div id="messagesdiv" style="position: absolute;"></div>
+
+    <div id="componentsdiv" style="position: absolute; top: 10px; left: 10px;" >
+        <div id="buttonsDiv" >
+        </div>
+        <div id="progressdiv" ></div>
+    </div>
+    <div id="dialogsdiv" style="position: absolute;">
+        <div id="playerDialogDiv" title="Player" >
+            <div id="waPlayerDiv" >
+                <p>
+                    This player is in a very early stage of development. It supports only predefined, simple instruments and some percussion.
+                    For better quality, export to Mp3 or Ogg and play the song from the Export window instead.
+                </p>
+            <span id="watoolbar" class="ui-widget-header ui-corner-all" style="padding: 10px 4px;">
+                <button id="warewindbutton">Rewind</button>
+                <button id="waplaybutton">Play</button>
+                <button id="wastopbutton">Stop</button>
+                <button id="waforwardbutton">Fast forward</button>
+            </span>
+            </div>
+        </div>
+        <div id="songSettingsDialogDiv" title="Song Settings" >
+        </div>
+        <div id="visualizerSettingsDialogDiv" title="Visual Settings" >
+        </div>
+        <div id="exportDialogDiv" title="Export" >
+        </div>
+        <div id="songsDialogDiv" title="Songs" >
+            <div id="songtabs">
+                <ul>
+                    <!--<li><a href="#my-songs-tab">My Songs</a></li>-->
+                    <!--<li><a href="#exported-songs-tab">Exported</a></li>-->
+                    <li><a href="#example-songs-tab">Examples</a></li>
+                </ul>
+                <!--<div id="my-songs-tab">-->
+                <!--</div>-->
+                <!--<div id="exported-songs-tab">-->
+                <!--</div>-->
+                <div id="example-songs-tab">
+                </div>
+            </div>
+        </div>
+        <div id="helpDialogDiv" title="Help/Credits" >
+            <div id="helpTabs" >
+                <ul>
+                    <li><a href="help/questions.html">Questions and Answers</a></li>
+                    <li><a href="help/song_settings.html">Song Settings</a></li>
+                    <!--<li><a href="help/visual_settings.html">Visual Settings</a></li>-->
+                    <!--<li><a href="help/player.html">Player</a></li>-->
+                    <!--<li><a href="help/player.html">Songs</a></li>-->
+                    <!--<li><a href="help/player.html">Export</a></li>-->
+                    <!--<li><a href="help/player.html">Account</a></li>-->
+                    <li><a href="help/credits.html">Credits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="feedbackDialogDiv" title="Feedback" >
+            <p>Do you want to give some feedback about this application? Great!</p>
+            <p>You can just write it down in the text area below and then press the "Submit" button.</p>
+            <p>If you want some kind of answer you can just provide an email address or simply provide such info in the "Account" dialog.</p>
+            <textarea id="feedbackTextArea" style="width: 100%; height: 10em;"></textarea>
+            <button id="submitFeedbackButton">Submit</button>
+        </div>
+        <div id="accountDialogDiv" title="Account" >
+        </div>
+        <div id="tutorialsDialogDiv" title="Tutorials" >
+            <div id="tutorialtabs">
+            </div>
+        </div>
+        <div id="songInfoDialogDiv" title="Song Info" >
+            <div id="songInfoTabs" >
+                <ul>
+                    <li><a href="#songInfoTabStructure">Structure</a></li>
+                    <li><a href="#songInfoTabInstruments">Instruments</a></li>
+                </ul>
+                <div id="songInfoTabStructure">
+                </div>
+                <div id="songInfoTabInstruments">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="hider-div" style="z-index: 1000; font-size: 16px; position: absolute; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 20px; opacity: 1; background-color: #ffffff">
+    <p>Loading page, please wait...</p>
+    <div id="loader-progress" style="height: 15px; width: 200px"></div>
+</div>
+
+
+</body>
+</html>

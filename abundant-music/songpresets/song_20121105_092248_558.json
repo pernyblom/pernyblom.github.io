@@ -1,0 +1,66 @@
+{
+"seed": 1561682070, "channelMaps": [{
+"id": "Map for melodyRenderChannel1", "renderChannel": "melodyRenderChannel1", "program": 30, "channel": 0, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 20, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 38.1, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for melodyRenderChannel2", "renderChannel": "melodyRenderChannel2", "program": 18, "channel": 1, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 20, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 38.1, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for melodyRenderChannel3", "renderChannel": "melodyRenderChannel3", "program": 29, "channel": 2, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 20, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 38.1, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner1RenderChannel1", "renderChannel": "inner1RenderChannel1", "program": 5, "channel": 3, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 80, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner1RenderChannel2", "renderChannel": "inner1RenderChannel2", "program": 28, "channel": 4, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 80, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner1RenderChannel3", "renderChannel": "inner1RenderChannel3", "program": 62, "channel": 5, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 80, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner2RenderChannel1", "renderChannel": "inner2RenderChannel1", "program": 88, "channel": 6, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 60, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner2RenderChannel2", "renderChannel": "inner2RenderChannel2", "program": 54, "channel": 7, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 60, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for inner2RenderChannel3", "renderChannel": "inner2RenderChannel3", "program": 29, "channel": 8, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 60, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for bassRenderChannel1", "renderChannel": "bassRenderChannel1", "program": 34, "channel": 11, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 110, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for bassRenderChannel2", "renderChannel": "bassRenderChannel2", "program": 2, "channel": 12, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 110, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for bassRenderChannel3", "renderChannel": "bassRenderChannel3", "program": 39, "channel": 13, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 8, "value": 110, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 12.700000000000001, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}, {
+"id": "Map for percussionRenderChannel1", "renderChannel": "percussionRenderChannel1", "program": 0, "channel": 9, "initialControllerMessages": [{
+"id": "", "type": 6, "value": 127, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 49, "value": 0, "_constructorName": "InitialMidiControllerMessage"}, {
+"id": "", "type": 51, "value": 0, "_constructorName": "InitialMidiControllerMessage"}], "_constructorName": "MidiChannelMap"}], "renderDataLength": 212}

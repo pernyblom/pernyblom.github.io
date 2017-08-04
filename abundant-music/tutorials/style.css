@@ -1,0 +1,25 @@
+a:link {text-decoration: underline; color: #eeeeee}
+
+a:visited {text-decoration: underline; color: #dddddd}
+
+a:active {text-decoration: underline; color: #ffffff}
+
+a:hover {text-decoration: underline; color: #ffffff;}
+
+body {
+    background-color: #111111; color: #ffffff; font-family: Segoe UI,Arial,sans-serif; font-size: 1.2em;
+}
+
+.background-div {
+    width: 100%; height: 100%; z-index: -1; border: 0; margin: 0; padding: 0; position: fixed; top: 0px; left: 0px; background: url('common_data/bg.png')
+}
+.main-div {
+    z-index: 10; max-width: 1024px; margin: auto; background: rgba(141, 133, 115, 0.85); padding: 25px; border-radius: 25px;
+}
+.sub-div {
+    margin-bottom: 40px; padding-left: 25px; padding-right: 25px; padding-bottom: 25px; border-style: solid; border-radius: 5px; border-color: #000000;
+}
+
+.bold {
+    font-weight: bold;
+}

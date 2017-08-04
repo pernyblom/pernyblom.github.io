@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parameters Tutorial</title>
+
+    <script src="common_data/jquery.js" ></script>
+    <script src="common_data/common.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="background-div">
+</div>
+
+<div class="header-div" ></div>
+
+<div class="main-div" id="parameters">
+    <h1>Parameters Tutorial</h1>
+    <p>
+        Welcome to the third tutorial about <a href="http://www.abundant-music.com" target="_blank" >Abundant Music</a>!
+    </p>
+    <p>
+        This tutorial is about the "Parameters" tab in the "Song Settings" window. In this tab, we will get a bit more fine-grained control of the the
+        resulting song by access to some of the probabilities and likelihoods that Abundant Music uses for scale, time signature, instruments, song structure,
+        harmony and a lot more.
+    </p>
+
+    <p style="font-size: 75%">
+        A short "clarifying" comment: Likelihoods can be any positive number and will later be translated into a probability, which must be a value between 0 and 1.
+        Likelihoods are used in those places where you don't want to manually make sure that all probabilities sum up to 1, which must be the case for
+        or probability distributions.
+    </p>
+
+
+    <div class="sub-div" id="exploring-parameters" >
+        <h2>Exploring Parameters</h2>
+
+        <p>
+            We are going to play with some parameters that control the scale, instruments, harmony and structure of the song.
+        </p>
+
+        <p>
+            Start by generating a new, fresh song that you like.
+        </p>
+
+        <p>
+            Then, select the "Parameters" tab in the "Song Settings" window.
+        </p>
+
+        <img src="parameters_data/parameters.png" />
+
+        <p>
+            We are going to force the scale to minor, the time signature to 3/4 and only use instruments from the "Acoustic" instrument set. To do this, we
+            first set the "Minor Scale Likelihood" to 1 an "Major Scale Likelihood" to 0.
+        </p>
+
+        <p>
+            Then we set the "3/4 Time Signature Likelihood" to 1 and both
+            "2/4 Time Signature Likelihood" and "4/4 Time Signature Likelihood" to 0.
+        </p>
+
+        <p>
+            Finally, the instrument likelihoods are set similarly: "Electronic Instruments Likelihood" to 0, "Electric Instruments Likelihood" to 0 and
+            "Acoustic Instruments Likelihood" to 1.
+        </p>
+
+        <p>
+            This is how it should look:
+        </p>
+        <img src="parameters_data/example.png" />
+
+        <p>
+            Next, we are going to force the structure of the song to be of "build" type. This means that the song starts slow and grows stronger by adding
+            more material. We are also going to turn off tonicization and modulation to prevent the song from moving between different scales.
+        </p>
+
+        <p>
+            The parameter values to do all this is shown in the following image:
+        </p>
+
+        <img src="parameters_data/example2.png" />
+
+        <p>
+            Listen to the song now!
+        </p>
+        <p>
+            If you change the main seed, the new song will be restricted to this "build" type, with acoustic instruments in minor with time signature 3/4.
+        </p>
+
+        <p>
+            There are a lot of parameters available to play with. Experiment and have fun :).
+        </p>
+        <p>
+            The following sections will describe all parameters in more depth.
+        </p>
+
+    </div>
+
+
+
+    <div class="sub-div" id="scale-type-and-ts" >
+        <h2>Scale Type and Time Signature</h2>
+
+        <p>
+            Abundant Music currently supports two scale types: Major and Minor. The scale type stays the same during the whole song unless there is
+            a modulation or tonicization.
+        </p>
+
+        <p>
+            If you want to change the likelihood for a certain scale type, you can just change "Minor Scale Likelihood" and/or "Major Scale Likelihood"
+            to any positive value or zero. Note the two buttons "0" and "1" that can be used for quickly setting likelihoods and probabilities.
+        </p>
+
+        <p>
+            The time signature and corresponding likelihoods work the same way. Abundant Music currently supports three different time signatures.
+            The 4/4 time signature is by default the most likely one.
+        </p>
+
+        <img src="parameters_data/scale_type_and_ts.png" />
+
+    </div>
+
+
+
+    <div class="sub-div" id="" >
+        <h2>Instrument Sets</h2>
+
+        <p>
+            You can define three sets of instruments in the "Domain" tab: Electronic, Electric and Acoustic.
+        </p>
+
+        <p>
+            These sets of instruments are set to some suitable instruments by default that correspond to the names but
+            you can define them in any way you like and just simply view them as fully customizable sets.
+        </p>
+
+        <p>
+            The three likelihoods "Electronic Instruments Likelihood", "Electric Instruments Likelihood", and "Acoustic Instruments Likelihood"
+            specifies the probability distribution for selecting from the three instrument sets.
+        </p>
+
+        <img src="parameters_data/instrument_sets.png" />
+
+    </div>
+
+
+
+    <div class="sub-div" id="song-structure-sets" >
+        <h2>Song Structure Sets</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/song_structure_sets.png" />
+
+    </div>
+
+
+    <div class="sub-div" id="voice-leading-parameters" >
+        <h2>Voice Leading Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/voice_leading_parameters.png" />
+
+    </div>
+
+    <div class="sub-div" id="chord-parameters" >
+        <h2>Chord Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/chord_parameters.png" />
+
+    </div>
+
+    <div class="sub-div" id="harmony-parameters" >
+        <h2>Harmony Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/harmony_parameters.png" />
+
+    </div>
+
+
+    <div class="sub-div" id="percussion-parameters" >
+        <h2>Percussion Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/percussion_parameters.png" />
+
+    </div>
+
+    <div class="sub-div" id="effect-parameters" >
+        <h2>Effect Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/effect_parameters.png" />
+
+    </div>
+
+
+    <div class="sub-div" id="motif-rythm-parameters" >
+        <h2>Motif and Rythm Parameters</h2>
+
+        <p>
+        </p>
+
+        <img src="parameters_data/motif_rythm_parameters.png" />
+
+    </div>
+
+
+
+</div>
+
+<div class="footer-div" ></div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Song Structure Tutorial</title>
+
+    <script src="common_data/jquery.js" ></script>
+    <script src="common_data/common.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="background-div">
+</div>
+
+<div class="header-div" ></div>
+
+<div class="main-div">
+    <h1>Custom Song Structure Tutorial</h1>
+
+    <p>
+        The default mode for <a href="http://www.abundant-music.com" target="_blank" >Abundant Music</a> is to generate the song structure
+        randomly by sampling from a predefined set of song structures.
+        This sometimes gives you what you want but often you want to have much more control over the result.
+    </p>
+
+    <p>
+        This tutorial will show you how to create custom song structures.
+    </p>
+
+
+    <div class="sub-div">
+        <h2>First Verse</h2>
+        <p>
+            First, make sure that you are logged in by opening the "Account" window.
+            Then, open the "Song Settings" window and select the "Details" tab. It should look something like this:
+        </p>
+
+        <img src="custom_song_structure_data/details_tab.png" />
+
+        <p>
+            Now, set the "Overwrite Song Structure" option to "true" to override the default random one. Also, Abundant Music sometimes
+            inserts an intro and an end. Since we want complete control in this case, go to the "Parameters" tab and set "Song Intro Probability"
+            and "Song End Probability" to 0. It should now look like follows:
+        </p>
+
+        <img src="custom_song_structure_data/intro_end.png" />
+
+        <p>
+            Go back to the "Details" tab and click on the first item in the "Song Structure" list. It should only be a single item with a "Verse 1" song part.
+            If this isn't the case, click on the "Set Default" button at the top left in the "Details" tab.
+        </p>
+
+        <p>
+            The "Verse 1" item expands and you should see its properties like follows:
+        </p>
+        <img src="custom_song_structure_data/song_structure.png" />
+
+
+        <p>
+            Make sure that you only have one "Verse 1" in the Song Structure list and set "Override Song Structure" to true.
+            Select the Verse 1 and turn off intro and end. "Song Intro Probability" "Song End Probability"
+        </p>
+
+        <p>
+            Set "Prefix Group Probabilities (Override)" and "Postfix Group Probabilities (Override)" to 0.
+            These control automatic inserts of short phrases that introduce or end phrase groups.
+
+            Create a pure harmony without melody by manually setting render amounts for melody, inner 1, inner 2, bass and percussion.
+            Set the render amounts between 0 and 1. 0 means silence and 1 means full velocity and also more notes such as doublings.
+            Turn off melody by setting "melody render amount" to 0.
+
+            You should now have something like this:
+        </p>
+
+        <img src="custom_song_structure_data/first_verse.png" />
+
+        <p>
+            Press the "Compose" button at the top of the page to compose "Verse 1". You should then see a single phrase in the background. Mine looks like this:
+        </p>
+
+        <img src="custom_song_structure_data/first_verse_rendered.png" />
+
+        <p>
+            You might want to listen to the first verse now.
+            If you don't know how to do that, go to the <a href="introduction.html" >First Tutorial</a> or the more in-depth
+            <a href="render_and_play_songs.html" >Render and Play Songs Tutorial</a>.
+        </p>
+
+    </div>
+    <div class="sub-div">
+        <h2>Second Verse</h2>
+
+        <p>
+            Add another Verse 1 by pressing the "+ Song Part Structure" button. Make sure that it is another "Verse 1".
+        </p>
+
+        <p>
+            This verse should be stronger than the first so make the melody render amount greater than 0 and set everything else a bit stronger as well.
+            Also, disable the prefix and postfix groups by setting those probabilities to zero.
+        </p>
+
+        <img src="custom_song_structure_data/second_verse.png" />
+
+        <p>
+            Now, press the "Compose" button to see the result. For me, the composition looks as follows:
+        </p>
+
+        <img src="custom_song_structure_data/first_and_second_rendered.png" />
+
+        <p>
+            Take some time to experiment with different main seeds and sub-seeds to get a melody and harmony that you like.
+        </p>
+    </div>
+
+    <div class="sub-div" >
+        <h2>Overriding Song Part Type Properties</h2>
+
+        <p>
+            The two "Verse 1" are connected which means that they have a lot in common when it comes to phrase structure etc. Now we
+            are going to change both "Verse 1" by adding a "Song part override info".
+        </p>
+
+            <img src="custom_song_structure_data/song_part_type_override.png" />
+
+        <p>
+            Set "override phrase group type" to true.
+            Then you can change the phrase group type to something of your liking. You can even create your own, custom phrase group.
+        </p>
+
+        <img src="custom_song_structure_data/song_part_phrase_type.png" />
+
+    </div>
+
+
+    <div class="sub-div">
+        <h2>Chorus</h2>
+
+        <p>
+            Now it is time to add the Chorus! Add two "Chorus 1" to the structure and set the prefix and postfix probabilities to
+            zero except for the first chorus' that you set to 1. Now a short prefix group will be added before the first chorus, which
+            sometimes sounds good ;)
+            Chorus have a default strength of "Very Strong" which you can keep as it is.
+        </p>
+        <img src="custom_song_structure_data/chorus.png" />
+
+        <p>
+            Listen to the song now! Once again, you can very easily create new variants by changing the main seed, any sub-seed or parameters and get different songs with
+            the same structure.
+        </p>
+    </div>
+
+
+    <div class="sub-div">
+        <h2>Final Touch</h2>
+        <p>
+            After the double chorus, we are going to add a single measure with only bass. Add a "Misc 1" group to the song structure and set all render amounts to 0,
+            except the bass. Also set "Harmony total length override" to 1 and "Harmony rythm count overrides" to 4.
+        </p>
+        <img src="custom_song_structure_data/bass_only.png" />
+
+        <p>
+            Finally, add two "Verse 1" to make a nice connection to the first part of the song. Here are some songs with different main seeds, all using the same structure:
+        </p>
+
+        <p>
+            <audio controls>
+                <source src="custom_song_structure_data/final1.ogg" type="audio/ogg">
+                <source src="custom_song_structure_data/final1.mp3" type="audio/mpeg">
+                <a href="custom_song_structure_data/final1.mp3" target="_blank" >Result Link 1 (Mp3)</a>
+            </audio>
+        </p>
+        <p>
+            <audio controls>
+                <!--<source src="custom_song_structure_data/final2.ogg" type="audio/ogg">-->
+                <source src="custom_song_structure_data/final2.mp3" type="audio/mpeg">
+                <a href="custom_song_structure_data/final2.mp3" target="_blank" >Result Link 2 (Mp3)</a>
+            </audio>
+        </p>
+        <p>
+            <audio controls>
+                <source src="custom_song_structure_data/final3.ogg" type="audio/ogg">
+                <source src="custom_song_structure_data/final3.mp3" type="audio/mpeg">
+                <a href="custom_song_structure_data/final3.mp3" target="_blank" >Result Link 3 (Mp3)</a>
+            </audio>
+        </p>
+
+
+        <p>
+            Now it is time for you to complete the song structure! You might want to add another double chorus or surprise with a bridge section.
+            Maybe add a custom intro and/or end? A drum solo or pure harmony section somewhere perhaps?
+        </p>
+        <p>
+            Whatever you do, the important thing now is that you now know how to create your own song structure and override the defaults.
+        </p>
+
+        <p>
+            Happy composing!
+        </p>
+    </div>
+</div>
+
+<div class="footer-div" ></div>
+
+</body>
+</html>

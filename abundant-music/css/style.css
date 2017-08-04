@@ -1,0 +1,114 @@
+
+#canvasfor2dcontext {
+    cursor: move;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gui-property-component {
+    margin-top: 0.35em;
+}
+
+.preset-list {
+    list-style-type: none;
+}
+.song-list {
+    list-style-type: none;
+}
+
+.preset-list li {
+    /*margin: 3px;*/
+    /*padding: 0.4em;*/
+    /*font-size: 1.4em;*/
+    /*height: 18px;*/
+}
+
+.preset-name-input {
+    width: 16em;
+}
+.preset-name-label {
+    /*margin-left: 10px;*/
+    margin-right: 1.2em;
+}
+.toggle-button {
+    /*margin-left: 10px;*/
+    margin-right: 0.7em;
+}
+
+/*.settings-header-button {*/
+/*font-size: 50%;*/
+/*height: 30px;*/
+/*}*/
+
+
+.songInfoInstrumentsTable {
+    padding: 1em;
+    width: 100%;
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.oddTableRow {
+    background: #eeeeee;
+}
+.evenTableRow {
+    background: #dddddd;
+}
+
+.transparent {
+    filter:alpha(opacity=60); /* for IE4 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* IE8 */
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.very-transparent {
+    filter:alpha(opacity=40); /* for IE4 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; /* IE8 */
+    -moz-opacity:0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.result-url {
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+}
+.progress-component {
+    margin-top: 0.7em;
+    padding: 0.35em;
+}
+.progress-bar {
+    margin-top: 0px;
+    padding: 0px;
+    height: 2em;
+    /*width: 100px;*/
+}
+.settings-panel {
+    /*max-height: 400px;*/
+}
+
+
+
+.object-list-item {
+    list-style-type: none; margin: 0px; padding-left: 2.5em; padding-top: 0.25em; padding-bottom: 0.25em; position: relative;
+}
+
+.object-list-panel {
+    margin: 0.7em; padding: 0.7em;
+}
+
+.vertical-list-item-drag-handle {
+    position: absolute; padding: 0.5em; left: 0; top: 0; bottom: 0; cursor: move;
+}
+
+.ui-selecting { background: #FECA40; }
+.ui-selected { background: #F39814; color: white; }

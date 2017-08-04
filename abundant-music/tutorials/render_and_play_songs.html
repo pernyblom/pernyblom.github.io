@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Render and Play Songs Tutorial</title>
+
+    <script src="common_data/jquery.js" ></script>
+    <script src="common_data/common.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="background-div">
+</div>
+
+<div class="header-div" ></div>
+
+<div class="main-div">
+    <h1>Render and Play Songs Tutorial</h1>
+
+    <p>
+        When using <a href="http://www.abundant-music.com" target="_blank" >Abundant Music</a>, you have a lot of options for playing and rendering songs.
+        The server is able to export to Midi, Mp3 and Ogg files using a couple of different soundfonts. The client can also play songs if your browser supports
+        web audio.
+        You can also export a Midi file and then render it to Mp3/Ogg with another program that for example supports VST instruments.
+    </p>
+
+    <p>
+        To make any of these options available, you need to log in first through the "Account" window.
+    </p>
+
+    <div class="sub-div">
+        <h2>Export Mp3/Ogg/Midi</h2>
+        <p>
+            First, open the "Export" window and select the tab you want. For example, if you want to render an Mp3, select the "Mp3" tab.
+        </p>
+
+        <img src="render_and_play_songs_data/export_mp3_tab.png" />
+
+        <p>
+            Press "Export Mp3" (or whatever you chose for file type) and wait until you see a small player and a "Result Link" show up. With the link, you can access
+            the file directly and save it on your computer. With the player, you can play the music and at the same time see what notes are played in the background.
+        </p>
+
+        <p>The server only saves the exported files for 20 minutes, so if you want to keep a particular render, make sure that you save it on your own computer
+        with the "Result Link". In many browsers, it is just a matter of right clicking on the link and then select "Save Link Target" or something similar.</p>
+
+        <img src="render_and_play_songs_data/play_mp3.png" />
+
+        <p>
+            If you are not happy with the mixing, you can modify the sliders for volume, reverb and chorus.
+        </p>
+        <p>
+            Not every browser supports the Mp3 and Ogg formats. If you can't hear anything when pressing the play button, try another format instead.
+        </p>
+
+        <p>
+            When exporting a Midi file, there is currently no player that shows up. This might change in the future when Midi is supported by the browsers.
+        </p>
+
+    </div>
+
+    <div class="sub-div">
+        <h2>Web Audio Player</h2>
+        <p>
+            The web audio player is only available in browsers that has implemented the web audio standard. Currently, it is only <a href="http://www.google.com/chrome" >Chrome</a>
+            that has done so, but <a href="http://www.firefox.com">Firefox</a> is probably going to support it soon as well.
+        </p>
+
+        <p>
+            The web audio player has a couple of options for selecting simple instruments for playback for the different parts and adjusting volume.
+        </p>
+
+        <img src="render_and_play_songs_data/web_audio_player.png" />
+    </div>
+
+
+    <div class="sub-div">
+        <h2>External Programs</h2>
+        <p>
+            If you first export a Midi file and save it on your computer, you can use an external program, such as
+            <a href="http://www.synthfont.com/Downloads.html">SynthFont</a>, <a href="http://lmms.sourceforge.net/">LMMS</a>, <a href="http://ardour.org/" >Ardour</a>
+            and many other to render an Mp3/Ogg/Wav or whatever the program supports.
+        </p>
+
+        <p>
+            The following is a screenshot from <a href="http://www.synthfont.com/Downloads.html">SynthFont</a> where you can render a
+            Wav file by pressing the "Play to File" button:
+        </p>
+        <img src="render_and_play_songs_data/synthfont.png" />
+        <p>
+            You can do a lot more with SynthFont, like using custom soundfonts, VST instruments, edit/inspect the Midi data etc.
+        </p>
+    </div>
+
+
+</div>
+
+<div class="footer-div" ></div>
+
+
+</body>
+</html>
