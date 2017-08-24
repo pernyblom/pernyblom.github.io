@@ -1,0 +1,2 @@
+# Module com.pernyblom.HelloWorld
+# RPC service class, partial path of RPC policy file

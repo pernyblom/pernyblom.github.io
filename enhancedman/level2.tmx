@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="16" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="completeMessage" value="Level 2 Complete!"/>
+  <property name="groundColor" value="0xffffff"/>
+  <property name="groundEmit" value="0x000000"/>
+  <property name="introMessage" value="Level 2 - The Village"/>
+  <property name="skyColor" value="0x000000"/>
+  <property name="skyEmit" value="0x000000"/>
+ </properties>
+ <tileset firstgid="1" name="tiles2" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background" width="64" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztklsKwDAIBHOFYu9/1hLoh4irNEof1gEpBNk4pmM0TdPY7EZVxXKuvoer7tV28Gd/z43OQr1fR3PizqRUpR1Y/qie8Ce/ZRnNA7nz/rv85f3ZmZojOp8gdy8za84sNqXQ3RL07l5mdM5MZh6JL2dl5ygz8nZovig8V+539b9DmW/wPwDtMQ5G
+  </data>
+ </layer>
+ <layer name="Solid" width="64" height="16">
+  <data encoding="base64" compression="zlib">
+   eJy9lmELhDAIhr2D6u5jjP7/Xz2CBO/FqTPXA7JYzummFpHPO6CzBXSQNbFmtr3lGncxt2uKQANdXH/KkbA7QoW9iA1NpylzuIbFIpNHco8snDtZG734M/Yi9VaxlzxrLW8j9j/X2By9KF6OWHnGNRYVbZ9R31nfy/8qvPhHwTXyDIn0s9KeG8goS3Bes831UtX/OOYv2bki9+z5X02j/16KkkXWf69WIvWi+XOnp3uc/WdV/MhixW/p977vVffDWPefwbs/FKzvKj96/26YO0/1WYu7Psj/QU3IeDcr/pF7G+31Xk5JkfFX97gZWGeQ8fuAcTYzzvPOXZ1xb/Rc/JJXZz4aS0WOYh+YzQ+wqQ6H
+  </data>
+ </layer>
+ <layer name="Foreground" width="64" height="16" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Misc" width="64" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Messages" width="64" height="16"/>
+</map>

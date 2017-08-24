@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LD25 Jam Entry - Evil Chopper</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>-->
+
+    <!--<link rel="stylesheet" type="text/css" href="css/base/jquery-ui.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="css/blitzer/jquery-ui.css" />-->
+    <!--<link id="theme-link" rel="stylesheet" type="text/css" href="css/blitzer/jquery.ui.theme.css" />-->
+
+    <style>
+    </style>
+
+    <script type="text/javascript" src="js/soundmanager2-nodebug-jsmin.js"></script>
+    <script type="text/javascript" src="js/stacktrace.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+
+    <!--<script type="text/javascript" src="js/three.js"></script>-->
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script type="text/javascript" src="js/detector.js"></script>
+    <script type="text/javascript" src="js/mersennetwister.js"></script>
+    <script src="js/shaders/ConvolutionShader.js"></script>
+    <script src="js/shaders/VignetteShader.js"></script>
+    <script src="js/shaders/CopyShader.js"></script>
+    <script src="js/shaders/VerticalBlurShader.js"></script>
+    <script src="js/shaders/HorizontalBlurShader.js"></script>
+    <script src="js/shaders/FXAAShader.js"></script>
+    <script src="js/postprocessing/EffectComposer.js"></script>
+    <script src="js/postprocessing/MaskPass.js"></script>
+    <script src="js/postprocessing/RenderPass.js"></script>
+    <script src="js/postprocessing/ShaderPass.js"></script>
+    <script src="js/postprocessing/BloomPass.js"></script>
+
+    <script type="text/javascript" src="js/tween.js"></script>
+    <script type="text/javascript" src="js/classicalnoise.js"></script>
+
+    <script type="text/javascript" src="js/geom.js"></script>
+
+    <script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/gameobject.js"></script>
+    <script type="text/javascript" src="js/collisiongrid.js"></script>
+    <script type="text/javascript" src="js/level.js"></script>
+    <script type="text/javascript" src="js/renderer.js"></script>
+    <script type="text/javascript" src="js/resource.js"></script>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript">
+        loadResources(); // Will start loading when sound manager 2 is ready
+        $(document).ready(function() {
+            setup();
+        });
+    </script>
+
+</head>
+<body style="overflow: hidden; padding: 0px; margin: 0px;">
+
+<div id="topdiv" style="position: relative; padding: 0px; margin: 0px; border: 0px;" >
+    <div id="canvasdiv" style="position: absolute; padding: 0px; margin: 0px; border: 0px;">
+        <canvas id="canvas" />
+    </div>
+    <div id="layer1div" style="position: absolute;">
+        <canvas id="overCanvas" />
+    </div>
+    <div id="layer2div" style="position: absolute;" >
+    </div>
+    <div id="layer3div" style="position: absolute;">
+    </div>
+</div>
+
+</body>
+</html>

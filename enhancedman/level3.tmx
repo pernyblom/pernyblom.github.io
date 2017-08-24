@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="completeMessage" value="Leve 3 Complete!"/>
+  <property name="groundColor" value="0xffffff"/>
+  <property name="groundEmit" value="0x000000"/>
+  <property name="introMessage" value="Level 3 - The Fire Cave"/>
+  <property name="skyColor" value="0x000000"/>
+  <property name="skyEmit" value="0x000000"/>
+ </properties>
+ <tileset firstgid="1" name="tiles2" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Solid" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzVlt0KwyAMhbtC/y696Pu/6hhMCOFEozna7UCoaPUzqUlNy3NKX/sl/gu8dxjzLwdjN/pPwUe2NPZHxmcpqadu/wO/9r41fpD4vdLfv4W/BcczZxftFj5DFnMGf63wrfrC0iWYN+Aju4mGao/ka5XqV8R0LCw+Q3ndFXBQmxFzlON6/RKfEV8dT/TdR8bfsy/L/xHy8kdJ81H+f8SuQVb8rfx/4h4g217/vTkQzZsSk6Xaemzm6eSjmo3kuX+X5qGzyPDXuy90Fnp96hH7PFmyfIrwGXGa5T9SvhMy/vuR+8IbLgAUUw==
+  </data>
+ </layer>
+ <layer name="Foreground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="Misc" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <objectgroup name="Messages" width="32" height="32"/>
+</map>

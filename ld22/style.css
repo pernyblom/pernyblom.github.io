@@ -1,0 +1,20 @@
+
+.nearestNeighbor {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+#canvasDiv {
+	text-align:center;
+	width:100%;
+}
+
+#mainCanvas {
+	border-style:outset;
+	border-width:5px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	background-color:black;
+}

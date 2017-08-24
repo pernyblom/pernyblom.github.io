@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="128" height="16" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="completeMessage" value="Level 1 Complete! Press Enter to Continue"/>
+  <property name="groundColor" value="0xffffff"/>
+  <property name="groundEmit" value="0x000000"/>
+  <property name="introMessage" value="Level 1 - The Forest"/>
+  <property name="skyColor" value="0x000000"/>
+  <property name="skyEmit" value="0x000000"/>
+ </properties>
+ <tileset firstgid="1" name="tiles2" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background" width="128" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt1ksOgCAQBFHugPc/qxtXZECG0WQa6iXucFXtpxTbZVw4g9WeDexv1H1mA+xFW6Q/7wt9f/RnA1pW+q9+L5DTl88+/TVF//vor68+1xv676mW2Aagb7Z/e95zD/Ki/9ki/dmANm/Htj39tXl7WufZgKZey17P0Xk2kNcNADQNTg==
+  </data>
+ </layer>
+ <layer name="Solid" width="128" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztmd0KgCAMRldgP5de9P6v2k2RjQ2n9LPBdyA0UXdxmgMjusjUR7lubpwPfDGS7CcZ51vcwn8csqFt9Qn/fvnCDfz7Yf04nlZfwD9wFz3neWs8+PfN237g3zeZ7nlay9mlY3/gH6un1jMd/mNweppe2hf4hteBnnW8jpQtiIHkMh39jT2W7wX+4yLltpbvfJ3UB/HR/g1owH8snrizOesFEfx7onQxFGP8vObvvN5rY7WY4F92JvMGdg==
+  </data>
+ </layer>
+ <layer name="Foreground" width="128" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAgHcDIAAAAQ==
+  </data>
+ </layer>
+ <layer name="Misc" width="128" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt10EKgCAQRuG5wiy6/1UjKBAZoiJ1hv994CIDWzxQM5vPF3wTedBfG/210V8b/fNyG9+H/rnRX5vb2H2A/jXQXxv9tX09BzwY/XvUcdfysJ3jzXrQNeMfE3nRv5a/e9E/t75P9Hyd+e29IJp7sj7W2QGDowQE
+  </data>
+ </layer>
+ <objectgroup name="Messages" width="128" height="16">
+  <object x="64" y="416" width="96" height="96">
+   <properties>
+    <property name="message" value="Arrows for walking and jumping..."/>
+   </properties>
+  </object>
+  <object x="352" y="384" width="96" height="128">
+   <properties>
+    <property name="message" value="Watch out for fire..."/>
+   </properties>
+  </object>
+  <object x="512" y="384" width="96" height="128">
+   <properties>
+    <property name="message" value="Replenish your health with this..."/>
+   </properties>
+  </object>
+  <object x="352" y="255" width="96" height="96">
+   <properties>
+    <property name="message" value="Pick up the letters of evolution to evolve..."/>
+   </properties>
+  </object>
+  <object x="128" y="64" width="96" height="96">
+   <properties>
+    <property name="message" value="Find the goal. It is yellow..."/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

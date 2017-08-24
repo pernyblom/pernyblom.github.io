@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimalism - LD26</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/blitzer/jquery-ui-1.10.2.custom.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/blitzer/jquery.ui.theme.css" />-->
+
+    <script type="text/javascript" src="js/modernizr.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.2.min.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/base/jquery-ui.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="css/blitzer/jquery-ui.css" />-->
+
+
+    <script type="text/javascript" src="js/soundmanager2-nodebug-jsmin.js"></script>
+    <script type="text/javascript" src="js/stacktrace.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/cannon.js"></script>
+
+    <!--<script type="text/javascript" src="js/three.js"></script>-->
+    <script type="text/javascript" src="js/three.js"></script>
+    <script type="text/javascript" src="js/detector.js"></script>
+    <script type="text/javascript" src="js/mersennetwister.js"></script>
+    <script src="js/shaders/ConvolutionShader.js"></script>
+    <script src="js/shaders/VignetteShader.js"></script>
+    <script src="js/shaders/CopyShader.js"></script>
+    <script src="js/shaders/VerticalBlurShader.js"></script>
+    <script src="js/shaders/HorizontalBlurShader.js"></script>
+    <script src="js/shaders/FXAAShader.js"></script>
+    <script src="js/postprocessing/EffectComposer.js"></script>
+    <script src="js/postprocessing/MaskPass.js"></script>
+    <script src="js/postprocessing/RenderPass.js"></script>
+    <script src="js/postprocessing/ShaderPass.js"></script>
+    <script src="js/postprocessing/BloomPass.js"></script>
+
+    <script type="text/javascript" src="js/tween.js"></script>
+    <script type="text/javascript" src="js/classicalnoise.js"></script>
+
+    <script type="text/javascript" src="js/geom.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <script type="text/javascript" src="js/uniqueidmanager.js"></script>
+    <script type="text/javascript" src="js/propertyinfoprovider.js"></script>
+    <script type="text/javascript" src="js/guiproperties.js"></script>
+    <script type="text/javascript" src="js/jquerycomponents.js"></script>
+    <script type="text/javascript" src="js/guipropertiescomponent.js"></script>
+    <script type="text/javascript" src="js/valuecomponents.js"></script>
+
+    <script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/gameobject.js"></script>
+    <script type="text/javascript" src="js/collisiongrid.js"></script>
+    <script type="text/javascript" src="js/level.js"></script>
+    <script type="text/javascript" src="js/renderer.js"></script>
+    <script type="text/javascript" src="js/resource.js"></script>
+    <script type="text/javascript" src="js/touch.js"></script>
+    <script type="text/javascript" src="js/gamepad.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript">
+        loadResources();
+        $(document).ready(function() {
+            setup();
+        });
+    </script>
+
+    <style type="text/css">
+        .menu {
+            -moz-border-radius: 0.1em;
+            border-radius: 0.1em;
+            box-shadow: 5px 5px 4px #000000;
+        }
+
+        .title {
+            /*font-family: 'freckle_faceregular';*/
+            color: rgb(255, 255, 255);
+            font-size: 5em;
+            padding-top: 10px;
+            margin: 0;
+            border: 0;
+            text-align: center;
+            text-shadow:
+            1px 1px 2px rgb(0, 0, 0),
+            -1px -1px 2px rgb(0, 0, 0),
+            0.1em 0.1em 1px rgb(0, 0, 0)
+        }
+        .no-textshadow .title {
+            filter: dropshadow(color=#500000, offX=3, offY=3)
+        }
+
+        .ui-widget, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button, body { font-family: 'press_start_2pregular'; }
+
+    </style>
+
+</head>
+<body style="overflow: hidden; padding: 0px; margin: 0px;">
+
+<div id="topdiv" style="position: relative; padding: 0px; margin: 0px; border: 0px; " >
+    <div id="canvasdiv" style="position: absolute; padding: 0px; margin: 0px; border: 0px;">
+        <canvas id="canvas" />
+    </div>
+    <div id="layer1div" style="position: absolute;">
+        <canvas id="overCanvas" />
+    </div>
+    <div id="componentsDiv" style="position: absolute;" >
+    </div>
+</div>
+
+
+</body>
+</html>

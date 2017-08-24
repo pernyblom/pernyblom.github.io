@@ -1,0 +1,31 @@
+* Använd en ordentlig mall för three.js
+    * Detektering av webgl så man kan använda canvas renderer istället
+    * Touch events också
+* Använd senaste versionen av three.js som har emissive för material så man slipper specialfallet
+* Partikelsystem för lava-partiklar
+* Gubben blinkar när den blir träffad av lava
+* Healthbar
+* Förbättra kollisionsdetekteringen mellan gubbe och pickups
+* Se över kontrollen så att man kanske inte glider så länge?
+* Snygga till vissa saker med bevel geometry kanske?
+* Lava ska inte döda från sidan :)
+    * Detektera vilken slags kollision som faktiskt skedde på något smart sätt :)
+* Förenkla bana 1 avsevärt
+* Gör fler banor
+* Lägg till att man kan slåss och t ex slå sönder vissa block
+    * Uppgradering av slåss-grejer också "F"
+    * Slå-animering
+* Fiender vill man väl ha?
+* Lägg till hjälpmeddelanden
+* "Press enter to start" i början
+* Clicka också för att komma vidare (så det funkar på android)
+* On-screen controls
+* Bättre hantering av ljuskällor. Kolla i varje steg vilka saker som ska få ljuskällorna. Närmast spelaren såklart :)
+* Skapa lite procedurella texturer för sten och trä. Generera även normal maps och sånt skoj :)
+* Något post-processing-steg kanske? Det finns ju en massa skoj man kan göra :)
+    * Glare för lavan, checkpoints och pickups kanske?
+* Lens flares!
+
+
+
+

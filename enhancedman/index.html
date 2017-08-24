@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evolution - LD#24</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/ui-darkness/jquery-ui-1.8.23.custom.css" />-->
+
+    <script type="text/javascript" src="soundmanager2-nodebug.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>-->
+
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="resources.js"></script>
+    <script type="text/javascript" src="renderer.js"></script>
+    <script type="text/javascript" src="input.js"></script>
+    <script type="text/javascript" src="collisiongrid.js"></script>
+    <script type="text/javascript" src="level.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="gameobject.js"></script>
+
+    <script type="text/javascript" src="helvetiker_bold.typeface.js"></script>
+
+    <style type="text/css">
+        #topdiv {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #overlay {
+            position: absolute;
+            text-align: center;
+            color: #ffffff;
+        }
+        #textoverlay {
+            position: absolute;
+            text-align: center;
+            color: #ffffff;
+            width: 400px;
+            height: 200px;
+            font-family:"Courier New", Courier, monospace;
+            font: monospace;
+        }
+        #messages {
+            position: absolute;
+            text-align: left;
+            color: #ffffff;
+            width: 400px;
+            height: 400px;
+            left: 30px;
+            top: 20px;
+            font-family:"Courier New", Courier, monospace;
+        }
+            /*#debugdiv {*/
+            /*top: 0px;*/
+            /*left: 0px;*/
+            /*width: 1024px;*/
+            /*height: 768px;*/
+            /*position: absolute;*/
+            /*z-index: 1000;*/
+        /*}*/
+        /*#debugtextarea {*/
+            /*width: 800px;*/
+            /*height: 100px;*/
+        /*}*/
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            setupAndRun();
+        });
+    </script>
+
+</head>
+<body id="body">
+<div id="topdiv">
+    <div id="overlay" >
+    </div>
+    <div id="textoverlay" >
+    </div>
+    <div id="messages" >
+    </div>
+</div>
+</body>
+</html>
