@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="Web Music" default="create">
+
+    <property name="libs.dir" value="C:/Users/Per/Dropbox/private/libs" />
+
+    <property name="build.dir" value="C:/users/per/Dropbox/private/webmusic/distribution" />
+    <property name="src.dir" value="." />
+    <property name="java" value="C:/Program Files/Java/jre7/bin/java" />
+    <property name="rhino.jar" value="${libs.dir}/Rhino/js.jar" />
+    <property name="jslint.js" value="${libs.dir}/JSLint/jslint.js" />
+    <property name="yuicompressor.jar" value="${libs.dir}/yuicompressor/yuicompressor-2.4.7.jar" />
+    <property name="offlinesourcefiles" value="json2.js random.js mersennetwister.js utils.js constants.js interpolation.js splineinterpolation.js map.js latticenoise.js perlinnoise.js variables.js soundfont.js perftimer.js procedures.js dfssolver.js controlchannel.js renderchannel.js curve.js figurationgrid.js figurator.js renderline.js motifrenderelement.js controlline.js genmusicmodule.js splitzone.js rythm.js section.js sectionmodifier.js motifzone.js percussionmotifzone.js motif.js percussionmotif.js predefinedpercussion.js harmonicrythm.js harmonyelementinclude.js harmonyelement.js harmonymodifier.js sequenceharmonyelement.js plannedharmonyelement.js phraseharmonyelement.js voiceline.js structure.js renderstate.js renderdata.js harmonygenerator.js staticharmonygenerator.js dynamicharmonygeneratorconstants.js dynamicharmonygenerator.js chromatictransitionharmonygenerator.js chromaticoscillationharmonygenerator.js dominantharmonygenerator.js toniccadenceharmonygenerator.js suspantstrategies.js voicelinegenerator.js classicalvoicelinegenerator.js voicelineconstraintsinclude.js voicelineconstraints.js classicalvoicelineplanner.js midiconstants.js midirenderer.js datasample.js geninfo.js testmoduleconstants.js testmodule.js" />
+    <property name="javaofflinesourcefiles" value="javaofflineutils.js" />
+    <property name="nodesourcefiles" value="nodeappend.js" />
+    <property name="midisynthsourcefiles" value="riffwave.js midisynthsource.js midisynthenvelope.js midisynthfilter.js midisynthoscillator.js midisynthvoice.js midisynthinstrument.js midisynth.js" />
+
+    <property name="composeeditoronlinesourcefiles" value="stacktrace.js utils.js constants.js map.js mersennetwister.js json2.js midiconstants.js testmoduleconstants.js voicelineconstraintsinclude.js harmonyelementinclude.js dynamicharmonygeneratorconstants.js plannedharmonyelement.js datasample.js geninfo.js soundfont.js" />
+    <property name="composeeditoronlinesourcefiles2" value="midi.js fakebytearray.js tween.js classicalnoise.js jquerycomponents.js guiproperties.js guipropertiescomponent.js valuecomponents.js guiobjectlistcomponent.js uniqueidmanager.js propertyinfoprovider.js songsettingscomponents.js asyncoperation.js noterepr.js audioplayer.js sm2player.js webaudioplayer.js frustumcullingchunks.js composevisualizer.js composemain.js" />
+
+    <property name="webglshaderssourcefiles" value="ConvolutionShader.js VignetteShader.js CopyShader.js VerticalBlurShader.js HorizontalBlurShader.js FXAAShader.js" />
+    <property name="webglpostprocessingsourcefiles" value="EffectComposer.js MaskPass.js RenderPass.js ShaderPass.js BloomPass.js" />
+
+    <property name="onlinesourcefiles" value="js/jquery-1.8.2.js js/jquery-ui-1.9.0.custom.min.js swfobject.js stacktrace.js" />
+    <property name="onlineeditorsourcefiles" value="gui.js pianoroll.js sionpresets.js sionrenderer.js webaudiorenderer.js miscrenderers.js jquerycomponents.js uniqueidmanager.js guiproperties.js guipropertiescomponent.js guiobjectlistcomponent.js valuecomponents.js previewcomponents.js modulepropertyinfoprovider.js editor.js" />
+
+    <property name="datafiles" value="index.html style.css" />
+
+    <property name="serversourcefiles" value="${build.dir}/nodesource.js" />
+    <property name="serverbindirs" value="c:/timidity c:/ffmpeg c:/sox" />
+    <property name="serverdist.dir" value="c:/temp" />
+
+
+
+    <target name="create">
+        <tstamp>
+            <format property="current.time" pattern="yyyy-MM-dd HH:mm:ss" />
+        </tstamp>
+
+        <!--
+        <delete dir="${build.dir}">
+        </delete>
+        -->
+        <!--  Concatenate all sources -->
+        <concat destfile="${build.dir}/public/js/composeeditoronlinesource.js">
+            <filelist dir="${src.dir}/"	files="${composeeditoronlinesourcefiles}" />
+        </concat>
+        <concat destfile="${build.dir}/public/js/composeeditoronlinesource2.js">
+            <filelist dir="${build.dir}/public/js/"	files="${composeeditoronlinesourcefiles2}" />
+        </concat>
+        <concat destfile="${build.dir}/public/js/webglonly.js">
+            <filelist dir="${build.dir}/public/js/shaders/" files="${webglshaderssourcefiles}" />
+            <filelist dir="${build.dir}/public/js/postprocessing/" files="${webglpostprocessingsourcefiles}" />
+        </concat>
+
+
+        <apply executable="${java}" parallel="false" >
+            <fileset dir="${build.dir}/public/js" includes="composeeditoronlinesource.js" />
+            <arg line="-jar" />
+            <arg path="${yuicompressor.jar}" />
+            <arg line="-o ${build.dir}/public/js/composeeditoronlinesource-min.js" />
+            <srcfile />
+        </apply>
+
+        <apply executable="${java}" parallel="false" >
+            <fileset dir="${build.dir}/public/js" includes="composeeditoronlinesource2.js" />
+            <arg line="-jar" />
+            <arg path="${yuicompressor.jar}" />
+            <arg line="-o ${build.dir}/public/js/composeeditoronlinesource2-min.js" />
+            <srcfile />
+        </apply>
+        <apply executable="${java}" parallel="false" >
+            <fileset dir="${build.dir}/public/js" includes="webglonly.js" />
+            <arg line="-jar" />
+            <arg path="${yuicompressor.jar}" />
+            <arg line="-o ${build.dir}/public/js/webglonly-min.js" />
+            <srcfile />
+        </apply>
+
+
+        <!--<concat destfile="${build.dir}/editorsource.js">-->
+        <!--<filelist dir="${src.dir}/"	files="${onlinesourcefiles}" />-->
+        <!--<filelist dir="${src.dir}/"	files="${offlinesourcefiles}" />-->
+        <!--<filelist dir="${src.dir}/"	files="${onlineeditorsourcefiles}" />-->
+        <!--</concat>-->
+        <!--<concat destfile="${build.dir}/javaofflinesource.js">-->
+        <!--<filelist dir="${src.dir}/"	files="${offlinesourcefiles}" />-->
+        <!--<filelist dir="${src.dir}/"	files="${javaofflinesourcefiles}" />-->
+        <!--</concat>-->
+        <concat destfile="${build.dir}/nodesource.js">
+            <filelist dir="${src.dir}/"	files="${offlinesourcefiles}" />
+            <filelist dir="${src.dir}/"	files="${nodesourcefiles}" />
+        </concat>
+        <concat destfile="${build.dir}/public/js/composeworkersource.js">
+            <filelist dir="${src.dir}/"	files="${offlinesourcefiles}" />
+        </concat>
+
+        <concat destfile="${build.dir}/public/js/midisynthsourceconcat.js">
+            <filelist dir="${build.dir}/public/js/"	files="${midisynthsourcefiles}" />
+        </concat>
+
+
+        <apply executable="${java}" parallel="false" >
+            <fileset dir="${build.dir}/public/js" includes="composeworkersource.js" />
+            <arg line="-jar" />
+            <arg path="${yuicompressor.jar}" />
+            <arg line="-o ${build.dir}/public/js/composeworkersource-min.js" />
+            <srcfile />
+        </apply>
+
+
+        <!-- Creating cache manifest -->
+        <!--<copy todir="${build.dir}/public" overwrite="true">-->
+            <!--<filelist dir="${src.dir}" files="am.appcache" />-->
+        <!--</copy>-->
+
+        <!--<echo file="${build.dir}/public/am.appcache" append="true" ># ${current.time}</echo>-->
+
+
+        <!--<delete>-->
+            <!--<fileset dir="${build.dir}/public/js" >-->
+                <!--<include name="composeworkersource.js" />-->
+            <!--</fileset>-->
+        <!--</delete>-->
+
+        <!-- Copy all sources -->
+
+        <!--
+        <copy todir="${build.dir}">
+            <filelist dir="${src.dir}/" files="${onlinesourcefiles}" />
+        </copy>
+        -->
+        <!-- Copy all data files -->
+
+        <!--<copy todir="${build.dir}">-->
+        <!--<filelist dir="${src.dir}" files="javaofflineutils.js" />-->
+        <!--</copy>-->
+        <!-- Run JSLint - but it is not working??? -->
+        <!--
+        <apply executable="java" parallel="false" >
+            <fileset dir="${build.dir}" includes="source.js" />
+            <arg line="-jar" />
+            <arg path="${rhino.jar}" />
+            <arg path="${jslint.js}" />
+            <srcfile />
+        </apply>
+         -->
+
+        <!-- Run the compressor -->
+
+        <!--
+<apply executable="java" parallel="false" >
+   <fileset dir="${build.dir}" includes="editorsource.js" />
+   <arg line="-jar" />
+   <arg path="${yuicompressor.jar}" />
+   <arg line="-o ${build.dir}/editorsource-min.js" />
+   <srcfile />
+</apply>
+<apply executable="java" parallel="false" >
+   <fileset dir="${build.dir}" includes="javaofflinesource.js" />
+   <arg line="-jar" />
+   <arg path="${yuicompressor.jar}" />
+   <arg line="-o ${build.dir}/javaofflinesource-min.js" />
+   <srcfile />
+</apply>
+-->
+
+    </target>
+
+    <target name="serverdist" depends="create" >
+
+        <mkdir dir="${serverdist.dir}/server" />
+        <mkdir dir="${serverdist.dir}/server/node_modules" />
+        <mkdir dir="${serverdist.dir}/server/bin" />
+        <mkdir dir="${serverdist.dir}/server/bin/ffmpeg" />
+        <mkdir dir="${serverdist.dir}/server/bin/sox" />
+        <mkdir dir="${serverdist.dir}/server/bin/node" />
+        <mkdir dir="${serverdist.dir}/server/bin/mongodb" />
+        <mkdir dir="${serverdist.dir}/server/bin/timidity" />
+        <mkdir dir="${serverdist.dir}/server/bin/imdisk" />
+        <mkdir dir="${serverdist.dir}/server/soundfonts" />
+        <mkdir dir="${serverdist.dir}/server/public" />
+
+        <copy todir="${serverdist.dir}/server/bin/ffmpeg">
+            <fileset dir="c:/ffmpeg" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/bin/timidity">
+            <fileset dir="c:/timidity" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/bin/node">
+            <fileset dir="c:/node" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/bin/imdisk">
+            <fileset dir="c:/imdisk" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/bin/sox">
+            <fileset dir="c:/sox" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/bin/mongodb">
+            <fileset dir="c:/mongodb" excludes="**/journal/*.*" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/soundfonts">
+            <fileset dir="c:/soundfonts" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/node_modules">
+            <fileset dir="${build.dir}/node_modules" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/public">
+            <fileset dir="${build.dir}/public" excludes="**/*.mp3 **/*.ogg **/*.mid" />
+        </copy>
+        <copy todir="${serverdist.dir}/server/public/songpresets">
+            <fileset dir="${build.dir}/public/songpresets" />
+        </copy>
+
+        <copy todir="${serverdist.dir}/server">
+            <filelist dir="${build.dir}/" files="midi.js nodesource.js composeserver.js composetask.js serverchildtask.js toclientmessage.js databaseutils.js databasetypes.js limiter.js startserver.bat" />
+        </copy>
+
+        <delete>
+            <fileset dir="${serverdist.dir}/server/bin/mongodb/data/journal" includes="*.*" />
+        </delete>
+
+    </target>
+</project>
